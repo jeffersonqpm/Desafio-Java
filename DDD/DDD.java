@@ -54,6 +54,16 @@ public class DDD {
 
     static void imprimirDDD(int ddd) {
 
+        int[] array = { 61, 71, 11, 21, 32, 19, 27, 31 };
+        int valor = ddd;
+        if (contemValor(array, valor)) {
+
+            ddd = ddd;
+
+        } else {
+            ddd = 100;
+        }
+
         HashMap<Integer, String> mapDDD = new HashMap<>();
 
         mapDDD.put(61, "Brasilia");
@@ -64,10 +74,20 @@ public class DDD {
         mapDDD.put(19, "Campinas");
         mapDDD.put(27, "Vitoria");
         mapDDD.put(31, "Belo Horizonte");
-       
+        mapDDD.put(100, "DDD: Não cadastrado");
 
         System.out.println(ddd + ": " + mapDDD.get(ddd));
+    }
 
+    
+
+    private static boolean contemValor(int[] array, int valor) {
+        for (int elemento : array) {
+            if (elemento == valor) {
+                return true;
+            }
+        }
+        return false;
     }
 
 }
