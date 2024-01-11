@@ -1,3 +1,4 @@
+package DDD;
 import java.util.Scanner;
 
 public class DDD2 {
