@@ -6,7 +6,7 @@ public class DDDEstados {
     
     public void imprimirDDD(int [] array, int ddd){
         
-        if(contemValor(array, ddd) == true){
+        if(contemValor(array, ddd)){// verificar se é verdadeiro ou não
             ddd = ddd;
         }else{
             ddd = 0;
