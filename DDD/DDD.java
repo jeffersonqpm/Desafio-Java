@@ -51,23 +51,21 @@ public class DDD {
             Scanner scan = new Scanner(System.in);
 
             System.out.println("Digite um DDD ou Zero para sair:");
-            
+
             int dDD = scan.nextInt();
 
             if (dDD == 0) {
                 continuar = false;
                 System.out.println("Saiu!");
             } else {
-
-                imprimirDDD(dDD);
+                int[] array = { 11, 21, 81, 87 };
+                imprimirDDD(array, dDD);
             }
         }
 
     }
 
-    private static void imprimirDDD(int ddd) {
-
-        int[] array = {11, 21, 81};
+    private static void imprimirDDD(int[] array, int ddd) {
 
         if (contemValor(array, ddd)) {
 
@@ -81,9 +79,10 @@ public class DDD {
         mapDDD.put(11, "Sao Paulo");
         mapDDD.put(21, "Rio de Janeiro");
         mapDDD.put(81, "Pernambuco");
+        mapDDD.put(87, "Petrolina");
         mapDDD.put(0, "DDD nao cadastrado!");
 
-        System.out.println(ddd + ": " + mapDDD.get(ddd)+"\n");
+        System.out.println(ddd + ": " + mapDDD.get(ddd) + "\n");
 
     }
 
@@ -98,6 +97,5 @@ public class DDD {
 
         return false;
     }
-
 
 }
