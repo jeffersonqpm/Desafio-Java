@@ -37,6 +37,63 @@ SOLUÇÃO 01 ABAIXO: */
 
 package DDD;
 
+// import java.util.HashMap;
+// import java.util.Scanner;
+
+// public class DDD {
+
+//     public static void main(String[] args) {
+
+//         Scanner leitor = new Scanner(System.in);
+
+//         int dDD = leitor.nextInt();
+
+//         imprimirDDD(dDD);
+
+//     }
+
+//     static void imprimirDDD(int ddd) {
+
+//         int[] array = { 61, 71, 11, 21, 32, 19, 27, 31,81 };
+//        // int valor = ddd;
+//         if (contemValor(array, ddd)) {
+
+//             ddd = ddd;
+
+//         } else {
+//             ddd = 0;
+//         }
+
+//         HashMap<Integer, String> mapDDD = new HashMap<>();
+
+//         mapDDD.put(61, "Brasilia");
+//         mapDDD.put(71, "Salvador");
+//         mapDDD.put(11, "São Paulo");
+//         mapDDD.put(21, "Rio de Janeiro");
+//         mapDDD.put(32, "Juiz de Fora");
+//         mapDDD.put(19, "Campinas");
+//         mapDDD.put(27, "Vitoria");
+//         mapDDD.put(31, "Belo Horizonte");
+//         mapDDD.put(81, "Pernambuco");
+//         mapDDD.put(0, "DDD Não cadastrado");
+        
+//         System.out.println(ddd + ": " + mapDDD.get(ddd));
+     
+//     }
+
+    
+
+//     private static boolean contemValor(int[] array, int valor) {
+//         for (int elemento : array) {
+//             if (elemento == valor) {
+//                 return true;
+//             }
+//         }
+//         return false;
+//     }
+
+// }
+
 import java.util.HashMap;
 import java.util.Scanner;
 
@@ -44,20 +101,32 @@ public class DDD {
 
     public static void main(String[] args) {
 
-        Scanner leitor = new Scanner(System.in);
+        boolean continuar = true;
 
-        int dDD = leitor.nextInt();
+        while (continuar == true) {
 
-        imprimirDDD(dDD);
+            Scanner scan = new Scanner(System.in);
+
+            System.out.println("Informe o DDD: ");
+            int dDD = scan.nextInt();
+            
+            if (dDD == 0) {
+                continuar = false;
+                System.out.println("Saiu!");
+            } else {
+
+                imprimirDDD(dDD);
+            }
+
+        }
 
     }
 
-    static void imprimirDDD(int ddd) {
+    private static void imprimirDDD(int ddd) {
 
-        int[] array = { 61, 71, 11, 21, 32, 19, 27, 31,81 };
-       // int valor = ddd;
-        if (contemValor(array, ddd)) {
+        int[] array = {11, 21, 81};
 
+        if (contemValor(array, ddd) == true) {
             ddd = ddd;
 
         } else {
@@ -66,28 +135,23 @@ public class DDD {
 
         HashMap<Integer, String> mapDDD = new HashMap<>();
 
-        mapDDD.put(61, "Brasilia");
-        mapDDD.put(71, "Salvador");
-        mapDDD.put(11, "São Paulo");
-        mapDDD.put(21, "Rio de Janeiro");
-        mapDDD.put(32, "Juiz de Fora");
-        mapDDD.put(19, "Campinas");
-        mapDDD.put(27, "Vitoria");
-        mapDDD.put(31, "Belo Horizonte");
         mapDDD.put(81, "Pernambuco");
-        mapDDD.put(0, "DDD Não cadastrado");
-        
+        mapDDD.put(11, "Sao Paulo");
+        mapDDD.put(21, "Rio de Janeiro");
+        mapDDD.put(0, "DDD nao encontrado.");
+
         System.out.println(ddd + ": " + mapDDD.get(ddd));
-     
+
     }
 
-    
-
     private static boolean contemValor(int[] array, int valor) {
+
         for (int elemento : array) {
             if (elemento == valor) {
                 return true;
+
             }
+
         }
         return false;
     }
