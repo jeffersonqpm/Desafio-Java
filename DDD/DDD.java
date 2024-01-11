@@ -33,7 +33,7 @@ Imprima o nome da cidade correspondente ao DDD existente na entrada. Imprima DDD
 | 11                 | São Paulo        |
 -----------------------------------------
 
-SOLUÇÃO ABAIXO: */
+SOLUÇÃO 01 ABAIXO: */
 
 package DDD;
 
@@ -43,27 +43,31 @@ import java.util.Scanner;
 public class DDD {
 
     public static void main(String[] args) {
-        
+
         Scanner leitor = new Scanner(System.in);
 
         int dDD = leitor.nextInt();
 
         imprimirDDD(dDD);
 
-
     }
 
-    static void imprimirDDD(int ddd){
+    static void imprimirDDD(int ddd) {
 
         HashMap<Integer, String> mapDDD = new HashMap<>();
 
-        mapDDD.put(61,"Brasilia");
-        mapDDD.put(71,"Salvador");
-        mapDDD.put(81,"Pernambuco");
+        mapDDD.put(61, "Brasilia");
+        mapDDD.put(71, "Salvador");
+        mapDDD.put(11, "São Paulo");
+        mapDDD.put(21, "Rio de Janeiro");
+        mapDDD.put(32, "Juiz de Fora");
+        mapDDD.put(19, "Campinas");
+        mapDDD.put(27, "Vitoria");
+        mapDDD.put(31, "Belo Horizonte");
+       
 
         System.out.println(ddd + ": " + mapDDD.get(ddd));
 
     }
-   
-    
+
 }
