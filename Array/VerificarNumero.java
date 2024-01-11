@@ -19,9 +19,9 @@ public class VerificarNumero {
                 continuar = true;
                 System.out.println("Até mais Capiroto.");
             } else {
-                int [] arriado = {1,2,3,5,6,8,9,11};
+                int [] array = {1,2,3,5,6,8,9,11};
 
-                if(verificaValor(arriado, opc) == true){
+                if(verificaValor(array, opc) == true){
                     System.out.println("O número " + opc + " EXISTE NA ARRAY");
                     
                 }else{
