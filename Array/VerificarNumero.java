@@ -11,10 +11,10 @@ public class VerificarNumero {
         do {
 
             Scanner scan = new Scanner(System.in);
-            System.out.println("Digite um numero ou 999 para sair");
+            System.out.println("Digite um numero ou 666 para sair");
             int valor = scan.nextInt();
 
-            if (valor == 999) {
+            if (valor == 666) {
 
                 continuar = true;
                 System.out.println("Ate mais capiroto");
