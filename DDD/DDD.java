@@ -44,57 +44,69 @@ public class DDD {
 
     public static void main(String[] args) {
 
-        boolean continuar = true;
+        // Digite um DDD e retorne o estado.
 
-        while (continuar) {
+        boolean continuar = false;
+
+        do {
 
             Scanner scan = new Scanner(System.in);
+            System.out.println("Digite um DDD ou ZERO para sair: ");
+            int DDD = scan.nextInt();
+            int DDD2 = DDD;
 
-            System.out.println("Digite um DDD ou Zero para sair:");
-
-            int dDD = scan.nextInt();
-
-            if (dDD == 0) {
-                continuar = false;
+            if (DDD == 0) {
+                continuar = true;
                 System.out.println("Saiu!");
             } else {
                 int[] array = { 11, 21, 81, 87 };
-                imprimirDDD(array, dDD);
+                imprimirDDD(array, DDD, DDD2);
             }
-        }
+
+
+        } while (continuar == false);
 
     }
 
-    private static void imprimirDDD(int[] array, int ddd) {
+    private static void imprimirDDD(int[] array, int valor, int valor2) {
+       
 
-        if (contemValor(array, ddd)) {
+        if (verificarDDD(array, valor)) {
+            valor = valor;
 
-            ddd = ddd;
         } else {
-            ddd = 0;
+            valor = valor2+1;
         }
 
-        HashMap<Integer, String> mapDDD = new HashMap<>();
+        HashMap<Integer, String> mapDD = new HashMap<>();
 
-        mapDDD.put(11, "Sao Paulo");
-        mapDDD.put(21, "Rio de Janeiro");
-        mapDDD.put(81, "Pernambuco");
-        mapDDD.put(87, "Petrolina");
-        mapDDD.put(0, "DDD nao cadastrado!");
+        if (valor != valor2) {
+            System.out.println("DDD " + (valor-1) + " não cadastrado ou não existe.");
 
-        System.out.println(ddd + ": " + mapDDD.get(ddd) + "\n");
+        // } else if(valor == valor){
+        } else {
+
+            mapDD.put(11, "São Paulo");
+            mapDD.put(21, "Rio de Janeiro");
+            mapDD.put(81, "Pernambuco");
+            mapDD.put(87, "Petrolina");
+
+            mapDD.put(123, ": ");
+
+            System.out.println("DDD " + valor + mapDD.get(123) + mapDD.get(valor));
+        }
 
     }
 
-    private static boolean contemValor(int[] array, int valor) {
+    private static boolean verificarDDD(int[] array, int valorDigitado) {
 
-        for (int elemento : array) {
-            if (elemento == valor) {
+        for (int elementosArray : array) {
+            if (elementosArray == valorDigitado) {
                 return true;
 
             }
-        }
 
+        }
         return false;
     }
 
