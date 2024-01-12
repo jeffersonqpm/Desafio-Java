@@ -75,10 +75,10 @@ public class DDD {
             valor = valor;
 
         } else {
-            valor = valor2+1;
+            valor = valor+1;
         }
 
-        HashMap<Integer, String> mapDD = new HashMap<>();
+        HashMap<Integer, String> mapDDD = new HashMap<>();
 
         if (valor != valor2) {
             System.out.println("DDD " + (valor-1) + " não cadastrado ou não existe.");
@@ -86,14 +86,14 @@ public class DDD {
         // } else if(valor == valor){
         } else {
 
-            mapDD.put(11, "São Paulo");
-            mapDD.put(21, "Rio de Janeiro");
-            mapDD.put(81, "Pernambuco");
-            mapDD.put(87, "Petrolina");
+            mapDDD.put(11, "São Paulo");
+            mapDDD.put(21, "Rio de Janeiro");
+            mapDDD.put(81, "Pernambuco");
+            mapDDD.put(87, "Petrolina");
 
-            mapDD.put(123, ": ");
+            mapDDD.put(123, ": ");
 
-            System.out.println("DDD " + valor + mapDD.get(123) + mapDD.get(valor));
+            System.out.println("DDD " + valor + mapDDD.get(123) + mapDDD.get(valor));
         }
 
     }
