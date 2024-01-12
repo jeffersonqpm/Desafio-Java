@@ -59,7 +59,7 @@ public class DDD {
                 continuar = true;
                 System.out.println("Saiu!");
             } else {
-                int[] array = { 11, 21, 81, 87 };
+                int[] array = { 11, 21, 81, 87, 71 };
                 imprimirDDD(array, DDD, DDD2);
             }
 
@@ -90,6 +90,7 @@ public class DDD {
             mapDDD.put(21, "Rio de Janeiro");
             mapDDD.put(81, "Pernambuco");
             mapDDD.put(87, "Petrolina");
+            mapDDD.put(71, "Salvador");
 
             mapDDD.put(123, ": ");
 
