@@ -9,68 +9,63 @@ public class PaginaTeste {
 
     public static void main(String[] args) {
 
-        // Digite um DDD e retorne o estado.
+        boolean continuar = true;
 
-        boolean continuar = false;
-
-        do {
+        while (continuar) {
 
             Scanner scan = new Scanner(System.in);
             System.out.println("Digite um DDD ou ZERO para sair: ");
-            int DDD = scan.nextInt();
-            int DDD2 = DDD;
+            int ddd = scan.nextInt();
+            int ddd2 = ddd;
 
-            if (DDD == 0) {
-                continuar = true;
-                System.out.println("Saiu!");
+            if (ddd == 0) {
+                continuar = false;
+                System.out.println("Ate mais!!");
+
             } else {
+
                 int[] array = { 11, 21, 81, 87 };
-                imprimirDDD(array, DDD, DDD2);
+
+                imprimirDDD(array, ddd, ddd2);
+
             }
-
-
-        } while (continuar == false);
-
-    }
-
-    private static void imprimirDDD(int[] array, int valor, int valor2) {
-       
-
-        if (verificarDDD(array, valor)) {
-            valor = valor;
-
-        } else {
-            valor = valor2+1;
-        }
-
-        HashMap<Integer, String> mapDD = new HashMap<>();
-
-        if (valor != valor2) {
-            System.out.println("DDD " + (valor-1) + " não cadastrado ou não existe.");
-
-        // } else if(valor == valor){
-        } else {
-
-            mapDD.put(11, "São Paulo");
-            mapDD.put(21, "Rio de Janeiro");
-            mapDD.put(81, "Pernambuco");
-            mapDD.put(87, "Petrolina");
-
-            mapDD.put(123, ": ");
-
-            System.out.println("DDD " + valor + mapDD.get(123) + mapDD.get(valor));
         }
 
     }
 
-    private static boolean verificarDDD(int[] array, int valorDigitado) {
+    private static void imprimirDDD(int[] array, int ddd, int ddd2) {
 
-        for (int elementosArray : array) {
-            if (elementosArray == valorDigitado) {
+        if (verificaDDD(array, ddd)) {
+            ddd = ddd;
+
+        } else {
+            ddd = ddd2 + 1;
+        }
+
+        if (ddd != ddd2) {
+            System.out.println("DDD " + (ddd - 1) + " não está cadastrado ou não existe.");
+
+        } else {
+
+            HashMap<Integer, String> mapDDD = new HashMap<>();
+
+            mapDDD.put(11, "São Paulo");
+            mapDDD.put(81, "Pernambuco");
+            mapDDD.put(21, "Rio de Janeiro");
+
+            System.out.println(ddd + ": " + mapDDD.get(ddd));
+
+        }
+
+    }
+
+    private static boolean verificaDDD(int[] array, int valor) {
+
+        for (int elementos : array) {
+            if (elementos == valor) {
                 return true;
 
             }
-
         }
         return false;
     }
