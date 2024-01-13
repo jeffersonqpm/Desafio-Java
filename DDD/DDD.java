@@ -73,9 +73,10 @@ public class DDD {
 
         if (verificarDDD(array, valor)) {
             valor = valor;
-
         } else {
-            valor = valor+1;
+            // valor += 1;
+            valor++;
+            // valor = valor+1;
         }
 
         HashMap<Integer, String> mapDDD = new HashMap<>();
