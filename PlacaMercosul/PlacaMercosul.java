@@ -18,7 +18,7 @@ public class PlacaMercosul {
         String parte3 = direita(G10, 1);
 
         switch (parte2) {
-            case "0": parte2 = "A"; break;
+            case "0": parte2 = "A"; break;jeff
             case "1": parte2 = "B"; break;
             case "2": parte2 = "C"; break;
             case "3": parte2 = "D"; break;
