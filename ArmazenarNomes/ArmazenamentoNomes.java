@@ -1,28 +1,31 @@
 import java.util.Scanner;
 
-public class ArmazenamentoNomes {
-
+public class ArmazenarNomes {
 
     public static void main(String[] args) {
-        
-        Scanner scan = new Scanner(System.in);
+        // Criar um Scanner para a entrada do usuário
+        Scanner scanner = new Scanner(System.in);
 
-        int tamanhoLista = 3;
+        // Definir o tamanho do array
+        int tamanhoArray = 5; // Você pode ajustar conforme necessário
 
-        String [] listName = new String[tamanhoLista];
+        // Criar o array para armazenar os nomes
+        String[] nomes = new String[tamanhoArray];
 
-        for(int i =0; i< tamanhoLista; i++){
-            System.out.println("Digite um nome");
-            listName[i] = scan.next();
-
+        // Solicitar nomes ao usuário e armazenar no array
+        for (int i = 0; i < tamanhoArray; i++) {
+            System.out.print("Digite um nome: ");
+            nomes[i] = scanner.nextLine();
         }
-        scan.close();
 
+        // Fechar o Scanner para liberar recursos
+        scanner.close();
+
+        // Exibir os nomes armazenados no array
         System.out.println("Nomes armazenados:");
-        for(String nomes : listName){
-            System.out.println(nomes);
-
+        for (String nome : nomes) {
+            System.out.println(nome);
         }
     }
-    
 }
+
