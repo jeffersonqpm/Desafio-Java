@@ -22,7 +22,7 @@ public class ArmazenarNomes {
         scanner.close();
 
         // Exibir os nomes armazenados no array
-        System.out.println("Nomes armazenados:");
+        System.out.print("Nomes armazenados:\n");
         for (String nome : nomes) {
             System.out.println(nome);
         }
